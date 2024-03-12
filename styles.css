@@ -42,7 +42,7 @@ header{
     color: #f7786b;
 }
 
-.btn-talk{
+.btn-connect{
     color: #fff;
     text-decoration: none;
     padding: 8px 35px;
@@ -52,7 +52,7 @@ header{
     font-weight: 500;
 } 
 
-.btn-talk:hover{
+.btn-connect:hover{
     background: transparent;
     color: #f7786b;
 }
@@ -150,4 +150,41 @@ header{
 
 .navigation{
     margin-left: -300px;
+}
+
+.portfolio{
+    padding: 100px;
+    
+}
+
+/* portfolio styling */
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 70px;
+    padding: 70px;
+}
+
+.project {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.project h3 {
+    color: #333;
+}
+
+.project p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.project .btn {
+    background-color: #f7786b;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
 }
