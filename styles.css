@@ -154,7 +154,6 @@ header{
 
 .portfolio{
     padding: 100px;
-    
 }
 
 /* portfolio styling */
@@ -187,4 +186,10 @@ header{
     padding: 10px 20px;
     border-radius: 5px;
     display: inline-block;
+}
+
+.project .btn a:hover{
+    background-color: #f7786b;
+    color: white;
+    text-decoration: none;
 }
