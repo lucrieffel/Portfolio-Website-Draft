@@ -1,2 +1,7 @@
 # Portfolio-Website-Draft
-Draft of my portfolio website
+
+
+
+# Sources: 
+## CodeHal: https://www.youtube.com/@codehal
+### Tutorial Link: https://www.youtube.com/watch?v=oXPiMgHUnM8
