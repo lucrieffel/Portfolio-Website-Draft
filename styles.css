@@ -159,15 +159,20 @@ header{
 /* portfolio styling */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 70px;
-    padding: 70px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase the min-width as needed */
+    gap: 20px; /* Space between projects */
+    padding: 20px;
 }
 
 .project {
     border: 1px solid #ddd;
     padding: 10px;
     border-radius: 8px;
+    transition: transform 0.3s; /* Smooth transition for hover effects */
+}
+
+.project:hover {
+    transform: translateY(-5px); /* Optional: Lifts the project card slightly on hover */
 }
 
 .project h3 {
@@ -193,3 +198,7 @@ header{
     color: white;
     text-decoration: none;
 }
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase the min-width as needed */
+    gap: 20px; /* Space between projects */
+    padding: 20px;
