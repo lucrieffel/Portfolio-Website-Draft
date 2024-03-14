@@ -12,7 +12,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px; 
+    padding: 20px 5%; /* More responsive padding */
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -25,6 +25,17 @@ header{
     cursor: default;
 }
 
+.profile-image {
+    display: flex;
+    justify-content: center; 
+    padding: 20px; 
+}
+
+.profile-image img {
+    max-width: 90%; /*fit within container */
+    height: auto; /*maintain the image aspect ratio */
+}
+
 .logo span{
     color: #f7786b;
 }
@@ -33,7 +44,7 @@ header{
     font-size: 1.1em;
     color: #555; 
     text-decoration: none;
-    margin-right: 40px;
+    margin-right: 20px;
     font-weight: 500;  
     transition: .3s;
 }
@@ -50,6 +61,7 @@ header{
     border-radius: 10px;
     border: 2px solid #f7786b;
     font-weight: 500;
+    transition: .3s;
 } 
 
 .btn-connect:hover{
@@ -98,6 +110,13 @@ header{
     font-weight: 500;
     transition: .3s;
 }
+.btn-group {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    justify-content: center; 
+}
+
 
 .content p{ 
     padding: 10px 0 40px 0;
@@ -159,46 +178,122 @@ header{
 /* portfolio styling */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase the min-width as needed */
-    gap: 20px; /* Space between projects */
-    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: auto;
+    gap: 30px;
+    padding: 30px;
+    overflow-y: auto;
 }
 
 .project {
     border: 1px solid #ddd;
-    padding: 10px;
+    padding: 15px;
     border-radius: 8px;
-    transition: transform 0.3s; /* Smooth transition for hover effects */
-}
-
-.project:hover {
-    transform: translateY(-5px); /* Optional: Lifts the project card slightly on hover */
-}
-
-.project h3 {
-    color: #333;
-}
-
-.project p {
-    font-size: 0.9em;
-    color: #666;
 }
 
 .project .btn {
     background-color: #f7786b;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 12px 25px;
     border-radius: 5px;
     display: inline-block;
 }
 
-.project .btn a:hover{
-    background-color: #f7786b;
-    color: white;
-    text-decoration: none;
+.project .btn:hover {
+    background-color: white;
+    color: #f7786b;
 }
 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Increase the min-width as needed */
-    gap: 20px; /* Space between projects */
-    padding: 20px;
+/* About Section Styling to Match Portfolio */
+.about-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+.job-experience {
+    background-color: #fff; /* Matching the project card background */
+    border: 1px solid #ddd; /* Similar border to project cards */
+    padding: 15px;
+    border-radius: 8px; /* Matching border radius */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Similar shadow for depth */
+}
+
+.job-experience h2 {
+    color: #333; /* Title color */
+    margin-bottom: 20px; /* Spacing below the section title */
+}
+
+.job {
+    margin-bottom: 20px; /* Space between job entries if needed */
+}
+
+.job h3 {
+    color: #f7786b; /* Using theme color for job titles for consistency */
+    margin-top: 0;
+}
+
+.job p, .job ul {
+    margin-top: 10px; /* Spacing for paragraphs and lists */
+}
+
+.job ul {
+    list-style-type: square; /* Style to match portfolio list items */
+    padding-left: 20px; /* Indentation for list items */
+}
+
+.job ul li {
+    margin-bottom: 5px; /* Spacing between list items */
+}
+
+
+
+
+
+
+
+
+
+/*dynamic media queries to enhance responsiveness */
+@media (max-width: 1024px) {
+    header {
+        padding: 20px 50px;
+    }
+    .logo, .navigation a {
+        font-size: 0.9em;
+    }
+    .btn-connect {
+        padding: 6px 20px;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 30px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navigation {
+        margin-top: 10px;
+        margin-left: 0;
+    }
+    .navigation a {
+        margin-right: 15px;
+    }
+    .btn-connect {
+        margin-top: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navigation a {
+        font-size: 0.8em;
+        margin-right: 10px;
+    }
+    .btn-connect {
+        font-size: 0.8em;
+    }
+}
