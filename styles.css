@@ -1,10 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-padding-top: 10px;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-padding-top: 100px; 
 }
 
 header{
@@ -12,7 +20,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 5%; /* More responsive padding */
+    padding: 20px 5%; /*responsive padding */
     display: flex; 
     justify-content: space-between;
     align-items: center;
@@ -56,7 +64,7 @@ header{
 .btn-connect{
     color: #fff;
     text-decoration: none;
-    padding: 8px 35px;
+    padding: 8px 25px;
     background: #f7786b;
     border-radius: 10px;
     border: 2px solid #f7786b;
@@ -213,47 +221,73 @@ header{
     padding: 30px;
 }
 
+/* Job Experience Section  */
 .job-experience {
-    background-color: #fff; /* Matching the project card background */
-    border: 1px solid #ddd; /* Similar border to project cards */
-    padding: 15px;
-    border-radius: 8px; /* Matching border radius */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Similar shadow for depth */
+    margin: 2rem auto;
+    max-width: 90%;
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .job-experience h2 {
-    color: #333; /* Title color */
-    margin-bottom: 20px; /* Spacing below the section title */
+    color: #f7786b;
+    margin-bottom: 1rem;
 }
 
 .job {
-    margin-bottom: 20px; /* Space between job entries if needed */
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #eee; /* Separates job experiences */
+}
+
+.job:last-child {
+    border-bottom: none; /* Removes border from the last job entry */
 }
 
 .job h3 {
-    color: #f7786b; /* Using theme color for job titles for consistency */
     margin-top: 0;
+    color: #333;
 }
 
-.job p, .job ul {
-    margin-top: 10px; /* Spacing for paragraphs and lists */
+.job p {
+    margin: 0.5rem 0;
 }
 
 .job ul {
-    list-style-type: square; /* Style to match portfolio list items */
-    padding-left: 20px; /* Indentation for list items */
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+main {
+    margin-top: 100px; /* Adjust this value as needed */
 }
 
 .job ul li {
-    margin-bottom: 5px; /* Spacing between list items */
+    margin-bottom: 0.25rem;
 }
 
+/* Adjusting Header for Better Layout */
+header {
+    padding: 10px 5%; /* Reduced padding for smaller screens */
+}
 
+.job-experience {
+    margin-top: 100px; 
+}
 
+@media screen and (max-width: 768px) {
+    .job-experience {
+        max-width: 95%;
+        padding: 1rem;
+    }
 
-
-
-
+    .navigation, .btn-connect {
+        font-size: 0.9em; /* Adjust font size for responsiveness */
+    }
+}
 
 
 /*dynamic media queries to enhance responsiveness */
